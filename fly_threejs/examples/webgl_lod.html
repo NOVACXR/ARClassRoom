@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - level of detail</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		 
+
+		<script type="module">
+
+			import * as THREE from '../build/three.module.js';
+
+			import { FlyControls } from './jsm/controls/FlyControls.js';
+
+			let container;
+
+			let camera, scene, renderer, controls;
+
+			const clock = new THREE.Clock();
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 15000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+				scene.fog = new THREE.Fog( 0x000000, 1, 15000 );
+
+				const pointLight = new THREE.PointLight( 0xffcc01 ); //colour change //
+				pointLight.position.set( 0, 0, 0 );
+				scene.add( pointLight );
+
+				const dirLight = new THREE.DirectionalLight( 0xffffff );
+				dirLight.position.set( 0, 0, 1 ).normalize();
+				scene.add( dirLight );
+
+				const geometry = [
+
+					[ new THREE.TorusGeometry( 100, 40, 16, 100 ), 50 ],
+					[ new THREE.TorusKnotGeometry( 100, 30, 100, 16 ), 50 ],
+					[ new THREE.SphereGeometry( 100, 32, 16 ), 50 ],
+					[ new THREE.CylinderGeometry( 100, 150, 100, 32 ), 50 ],
+					[ new THREE.ConeGeometry( 100, 150, 32 ), 50 ],
+					
+					
+					[ new THREE.SphereGeometry( 100, 32, 16 ), 50], 
+					[ new THREE.CylinderGeometry( 100, 150, 100, 32 ), 50 ],
+					[ new THREE.ConeGeometry( 100, 150, 32 ), 50 ],
+					[ new THREE.TorusGeometry( 100, 40, 16, 100 ), 50 ],
+					[ new THREE.TorusKnotGeometry( 100, 30, 100, 16 ), 50 ]
+
+					
+
+				];
+
+				const material = new THREE.MeshLambertMaterial( { color: 0xffcc01, wireframe: true} ); //colour change //
+ 
+
+				const material1 = [
+
+					new THREE.MeshNormalMaterial(),
+					new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 30, flatShading: true } ) ,
+					new THREE.MeshLambertMaterial( { color: 0xffcc01, wireframe: true} ),
+					new THREE.MeshLambertMaterial( { color: 0xffaa00, wireframe: true} ),
+					new THREE.MeshLambertMaterial( { color: 0xdddddd } ),
+					
+					new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending } ),
+					new THREE.MeshPhongMaterial( { color: 0x000000, specular: 0x666666, emissive: 0xff0000, shininess: 10, opacity: 0.9, transparent: true } ),
+					new THREE.MeshLambertMaterial( { color: 0x666666, emissive: 0xff0000 } ),
+					
+					new THREE.MeshBasicMaterial( { color: 0xffaa00, wireframe: true } ),
+					new THREE.MeshLambertMaterial( { color: 0xffcc01, emissive: 0xff0000 } )
+					
+
+				];
+
+
+
+
+				for ( let j = 0; j < 1500; j ++ ) {
+
+					const lod = new THREE.LOD();
+
+					for ( let i = 0; i < geometry.length; i ++ ) {
+
+						const mesh = new THREE.Mesh( geometry[ Math.floor(Math.random() * geometry.length) ][ 0 ], material1[Math.floor(Math.random() * geometry.length)] );
+						mesh.scale.set( 2, 2, 2 );
+						mesh.updateMatrix();
+						mesh.matrixAutoUpdate = false;
+						lod.addLevel( mesh, geometry[ i ][ 1 ] );
+
+					}
+
+					lod.position.x = 40000 * ( 0.5 - Math.random() );
+					lod.position.y = 40000 * ( 0.5 - Math.random() );
+					lod.position.z = 30000 * ( 0.5 - Math.random() );
+					lod.updateMatrix();
+					lod.matrixAutoUpdate = false;
+					scene.add( lod );
+
+				}
+
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				//
+
+				controls = new FlyControls( camera, renderer.domElement );
+				controls.movementSpeed = 1000;
+				controls.rollSpeed = Math.PI / 8;
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				controls.update( clock.getDelta() );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
+</html>

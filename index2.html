@@ -41,7 +41,7 @@
             width: 600px;
             height: 350px;
             margin: 0 auto;
-            background-color: #dcf79d;
+            background-color: #f6bbcd;
         }
     </style>
 
@@ -169,20 +169,50 @@
                             <div class="image-wrapper">
                                 <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5">Solid
                                     Shapes</h2>
-                                <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise">
+
+                                <!-- Model Viewer Starts -->
+
+                                <model-viewer timescale="0.5" scale="20 20 20" id="transform"
+                                    orientation="0deg 0deg 180deg" class="w-100" bounds="tight"
+                                    src="models\visualising_shapes_scene_1_.glb" ar
+                                    ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
+                                    poster="images\poster.webp" shadow-intensity="1" autoplay>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                    <div>
+                                        <audio id="audio-button" controls src="audio\001.mp3"></audio>
+                                    </div>
+                                    <button slot="ar-button" id="ar-button">
+                                        View in your space
+                                    </button>
+                                    <div id="ar-prompt">
+                                        <img src="images\ar_hand_prompt.png">
+                                    </div>
+                                </model-viewer> 
+
+                                <!-- <script> //Model Viewer Scale
+                        const modelViewerTransform = document.querySelector("model-viewer#transform");
+                        const updateScale = () => {
+                            modelViewerTransform.scale = `${5} ${5} ${5}`;
+                        };
+                    </script> -->
+
+                                <!-- Model Viewer Ends -->
+                                <!-- <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise"> -->
                                 <div class="line"></div>
                             </div>
                         </div>
                         <div class="align-left col-lg-6">
 
-                            <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
-                                    class="btn btn-white display-7" href="#">Photoshop</a></div>
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
+                                    class="btn btn-white display-7" href="#">Photoshop</a></div> -->
                         </div>
                         <div class="align-right col-lg-6">
 
-                            <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
                                         class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get
-                                    Started</a></div>
+                                    Started</a></div> -->
                         </div>
                     </div>
                 </div>
@@ -192,22 +222,49 @@
                     <div class="row card-bg">
                         <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
                             <div class="image-wrapper">
-                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5">Visualizing Solid Shapes
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5">Visualizing Solid
+                                    Shapes
                                 </h2>
-                                <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise">
+
+
+
+                                <model-viewer timescale="0.5" scale="20 20 20" id="transform"
+                                orientation="0deg 0deg 180deg" class="w-100" bounds="tight"
+                                src="models\solid_shapes_scene_2_part_1.glb" ar
+                                ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
+                                poster="images\poster.webp" shadow-intensity="1" autoplay>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                                <div>
+                                    <audio id="audio-button" controls src="audio\001.mp3"></audio>
+                                </div>
+                                <button slot="ar-button" id="ar-button">
+                                    View in your space
+                                </button>
+                                <div id="ar-prompt">
+                                    <img src="images\ar_hand_prompt.png">
+                                </div>
+                            </model-viewer> 
+
+
+
+
+
+                                <!-- <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise"> -->
                                 <div class="line"></div>
                             </div>
                         </div>
                         <div class="align-left col-lg-6">
 
-                            <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
-                                    class="btn btn-white display-7" href="#">Photoshop</a></div>
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
+                                    class="btn btn-white display-7" href="#">Photoshop</a></div> -->
                         </div>
                         <div class="align-right col-lg-6">
 
-                            <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
                                         class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get
-                                    Started</a></div>
+                                    Started</a></div> -->
                         </div>
 
 
