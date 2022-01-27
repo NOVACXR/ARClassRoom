@@ -459,13 +459,13 @@
                                         <button id="side2" style="border-radius: 18px;">Side View</button>
                                     </div>
 
-
+<!-- 
                                     <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0"
                                         data-normal="1 0 0"></button>
                                     <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1"
                                         data-normal="1 0 0"></button>
                                     <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1"
-                                        data-normal="0 1 0"></button>
+                                        data-normal="0 1 0"></button> -->
 
 
 
@@ -478,7 +478,7 @@
                                 </style>
                                 <br>
                                 <p> There are 3 Different views that help visualise a solid<span
-                                        id="dots1">...</span><span id="more1"><br><br>
+                                        id="dots2">...</span><span id="more1"><br><br>
 
                                         ➤Top View<br><br>
                                         ➤Front View<br><br>
@@ -488,16 +488,16 @@
 
                                 <script>
                                     function myFunction1() {
-                                        var dots1 = document.getElementById("dots1");
+                                        var dots2 = document.getElementById("dots2");
                                         var moreText1 = document.getElementById("more1");
                                         var btnText1 = document.getElementById("myBtn1");
 
-                                        if (dots1.style.display === "none") {
-                                            dots1.style.display = "inline";
+                                        if (dots2.style.display === "none") {
+                                            dots2.style.display = "inline";
                                             btnText1.innerHTML = "Read more";
                                             moreText1.style.display = "none";
                                         } else {
-                                            dots1.style.display = "none";
+                                            dots2.style.display = "none";
                                             btnText1.innerHTML = "Read less";
                                             moreText1.style.display = "inline";
                                         }
@@ -522,6 +522,37 @@
                                     sideview2.addEventListener('click', () => {
                                         modelViewerTransform2.orientation = `0deg 00deg 270deg`;
                                     });
+
+                                    modelViewerTransform.addEventListener('load', () => {
+                                        const center = modelViewerTransform.getCameraTarget();
+                                        const size = modelViewerTransform.getDimensions();
+                                        const x2 = size.x / 2;
+                                        const y2 = size.y / 2;
+                                        const z2 = size.z / 2;
+
+                                        modelViewerTransform.updateHotspot({
+                                            name: 'hotspot-dim+X-Y',
+                                            position: `${center.x + x2} ${center.y - y2} ${center.z}`
+                                        });
+                                        modelViewerTransform.querySelector('button[slot="hotspot-dim+X-Y"]')
+                                            .textContent = `Side view`;
+
+                                        modelViewerTransform.updateHotspot({
+                                            name: 'hotspot-dim+X-Z',
+                                            position: `${center.x - x2} ${center.y} ${center.z - z2}`
+                                        });
+                                        modelViewerTransform.querySelector('button[slot="hotspot-dim+X-Z"]')
+                                            .textContent = `Front view`;
+
+                                        modelViewer.updateHotspot({
+                                            name: 'hotspot-dim+Y-Z',
+                                            position: `${center.x - x2} ${center.y - y2} ${center.z}`
+                                        });
+                                        modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]')
+                                            .textContent = `Top view`;
+                                    })
+
+
                                 </script>
 
 
@@ -594,7 +625,7 @@
                                     src="models\final\solid shapes scene 2 updated.glb" ar
                                     ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
                                     poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto"
-                                    style="background-color: #bef8c3;" orientation="0deg 0deg 0deg">
+                                    style="background-color: #bef8c3;">
                                     <div class="progress-bar hide" slot="progress-bar">
                                         <div class="update-bar"></div>
                                     </div>
@@ -611,9 +642,9 @@
 
 
                                     <div style="margin-top: 5px; margin-left: 5px;">
-                                        <button id="top2" style="border-radius: 18px;">Top View</button>
-                                        <button id="front2" style="border-radius: 18px;">Front View</button>
-                                        <button id="side2" style="border-radius: 18px;">Side View</button>
+                                        <button id="top3" style="border-radius: 18px;">Top View</button>
+                                        <button id="front3" style="border-radius: 18px;">Front View</button>
+                                        <button id="side3" style="border-radius: 18px;">Side View</button>
                                     </div>
 
 
@@ -627,49 +658,49 @@
                                 </style>
                                 <br>
                                 <p> There are 3 Different views that help visualise a solid<span
-                                        id="dots1">...</span><span id="more2"><br><br>
+                                        id="dots3">...</span><span id="more2"><br><br>
 
                                         ➤Top View<br><br>
                                         ➤Front View<br><br>
 
                                         ➤Side View</span></p>
-                                <button onclick="myFunction1()" id="myBtn1">Read more</button>
+                                <button onclick="myFunction1()" id="myBtn2">Read more</button>
 
                                 <script>
                                     function myFunction1() {
-                                        var dots1 = document.getElementById("dots1");
-                                        var moreText1 = document.getElementById("more1");
-                                        var btnText1 = document.getElementById("myBtn1");
+                                        var dots3 = document.getElementById("dots3");
+                                        var moreText2 = document.getElementById("more2");
+                                        var btnText2 = document.getElementById("myBtn2");
 
-                                        if (dots1.style.display === "none") {
-                                            dots1.style.display = "inline";
-                                            btnText1.innerHTML = "Read more";
-                                            moreText1.style.display = "none";
+                                        if (dots3.style.display === "none") {
+                                            dots3.style.display = "inline";
+                                            btnText2.innerHTML = "Read more";
+                                            moreText2.style.display = "none";
                                         } else {
-                                            dots1.style.display = "none";
-                                            btnText1.innerHTML = "Read less";
-                                            moreText1.style.display = "inline";
+                                            dots3.style.display = "none";
+                                            btnText2.innerHTML = "Read less";
+                                            moreText2.style.display = "inline";
                                         }
                                     }
                                 </script>
 
 
                                 <script type="text/javascript">
-                                    const modelViewerTransform2 = document.getElementById('orientation3');
+                                    const modelViewerTransform3 = document.getElementById('orientation3');
                                     // console.log(modelViewerTransform2);
-                                    const topview2 = document.querySelector('#top2');
+                                    const topview3 = document.getElementById('top3');
                                     // console.log(topview2);
-                                    const sideview2 = document.querySelector('#side2');
-                                    const frontview2 = document.querySelector('#front2');
+                                    const sideview3 = document.getElementById('side3');
+                                    const frontview3 = document.getElementById('front3');
 
-                                    topview2.addEventListener('click', () => {
-                                        modelViewerTransform2.orientation = `30deg 30deg 30deg`;
+                                    topview3.addEventListener('click', () => {
+                                        modelViewerTransform3.orientation = `30deg 30deg 30deg`;
                                     });
-                                    frontview2.addEventListener('click', () => {
-                                        modelViewerTransform2.orientation = `0deg 0deg 0deg`;
+                                    frontview3.addEventListener('click', () => {
+                                        modelViewerTransform3.orientation = `0deg 0deg 0deg`;
                                     });
-                                    sideview2.addEventListener('click', () => {
-                                        modelViewerTransform2.orientation = `0deg 00deg 270deg`;
+                                    sideview3.addEventListener('click', () => {
+                                        modelViewerTransform3.orientation = `0deg 00deg 270deg`;
                                     });
                                 </script>
 
@@ -759,9 +790,9 @@
 
 
                                     <div style="margin-top: 5px; margin-left: 5px;">
-                                        <button id="top2" style="border-radius: 18px;">Top View</button>
-                                        <button id="front2" style="border-radius: 18px;">Front View</button>
-                                        <button id="side2" style="border-radius: 18px;">Side View</button>
+                                        <button id="top4" style="border-radius: 18px;">Top View</button>
+                                        <button id="front4" style="border-radius: 18px;">Front View</button>
+                                        <button id="side4" style="border-radius: 18px;">Side View</button>
                                     </div>
 
 
@@ -775,49 +806,49 @@
                                 </style>
                                 <br>
                                 <p> There are 3 Different views that help visualise a solid<span
-                                        id="dots1">...</span><span id="more3"><br><br>
+                                        id="dots4">...</span><span id="more3"><br><br>
 
                                         ➤Top View<br><br>
                                         ➤Front View<br><br>
 
                                         ➤Side View</span></p>
-                                <button onclick="myFunction1()" id="myBtn1">Read more</button>
+                                <button onclick="myFunction1()" id="myBtn3">Read more</button>
 
                                 <script>
                                     function myFunction1() {
-                                        var dots1 = document.getElementById("dots1");
-                                        var moreText1 = document.getElementById("more1");
-                                        var btnText1 = document.getElementById("myBtn1");
+                                        var dots4 = document.getElementById("dots1");
+                                        var moreText3 = document.getElementById("more3");
+                                        var btnText3 = document.getElementById("myBtn1");
 
-                                        if (dots1.style.display === "none") {
-                                            dots1.style.display = "inline";
-                                            btnText1.innerHTML = "Read more";
-                                            moreText1.style.display = "none";
+                                        if (dots4.style.display === "none") {
+                                            dots4.style.display = "inline";
+                                            btnText3.innerHTML = "Read more";
+                                            moreText3.style.display = "none";
                                         } else {
-                                            dots1.style.display = "none";
-                                            btnText1.innerHTML = "Read less";
-                                            moreText1.style.display = "inline";
+                                            dots4.style.display = "none";
+                                            btnText3.innerHTML = "Read less";
+                                            moreText3.style.display = "inline";
                                         }
                                     }
                                 </script>
 
 
                                 <script type="text/javascript">
-                                    const modelViewerTransform2 = document.getElementById('orientation4');
+                                    const modelViewerTransform4 = document.getElementById('orientation4');
                                     // console.log(modelViewerTransform2);
-                                    const topview2 = document.querySelector('#top2');
+                                    const topview4 = document.getElementById('top4');
                                     // console.log(topview2);
-                                    const sideview2 = document.querySelector('#side2');
-                                    const frontview2 = document.querySelector('#front2');
+                                    const sideview4 = document.getElementById('side4');
+                                    const frontview4 = document.getElementById('front4');
 
-                                    topview2.addEventListener('click', () => {
-                                        modelViewerTransform2.orientation = `30deg 30deg 30deg`;
+                                    topview4.addEventListener('click', () => {
+                                        modelViewerTransform4.orientation = `30deg 30deg 30deg`;
                                     });
-                                    frontview2.addEventListener('click', () => {
-                                        modelViewerTransform2.orientation = `0deg 0deg 0deg`;
+                                    frontview4.addEventListener('click', () => {
+                                        modelViewerTransform4.orientation = `0deg 0deg 0deg`;
                                     });
-                                    sideview2.addEventListener('click', () => {
-                                        modelViewerTransform2.orientation = `0deg 00deg 270deg`;
+                                    sideview4.addEventListener('click', () => {
+                                        modelViewerTransform4.orientation = `0deg 00deg 270deg`;
                                     });
                                 </script>
 
@@ -1199,7 +1230,7 @@
         </div>
     </section> -->
 
-    <!-- <section data-bs-version="5" class="image1 cid-sHbVROcI66" id="image01-k">
+    <section data-bs-version="5" class="image1 cid-sHbVROcI66" id="image01-k">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
@@ -1207,19 +1238,19 @@
                         <img class="w-100" src="assets/images/features4.jpg" alt="Mobirise">
                     </div>
                 </div>
-                <div class="align-left col-lg-6">
+                <!-- <div class="align-left col-lg-6">
                     <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Photoshop</a> <a
                             class="btn btn-white display-7" href="#">Illustrator</a> <a class="btn btn-white display-7"
                             href="#/">InDesign</a></div>
-                </div>
-                <div class="align-right col-lg-6">
+                </div> -->
+                <!-- <div class="align-right col-lg-6">
                     <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
                                 class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get Started</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- <section data-bs-version="5" class="clients1 cid-sHbUG1G3da" id="clients01-a">
         <div class="container">
