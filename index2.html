@@ -115,7 +115,6 @@
                     </div>
                 </div>
                 <div id="card" class="col-12 col-md-12 col-lg-6 image-wrapper">
-
                     <!-- Model Viewer Starts -->
 
     <!-- <model-viewer timescale="0.5" scale = "20 20 20" id="transform" orientation="0deg 0deg 180deg" class="w-100"
@@ -233,12 +232,14 @@
                                         var playRequest = document.querySelector("#overlay");
                                         playRequest.classList.add("hide");
 
-                                        var sound = document.querySelector("#audio-button #audio-button2");
+                                        var sound = document.querySelector(
+                                            "#audio-button #audio-button2 #audio-button3 #audio-button4");
                                         sound.play();
                                     }
 
                                     function jumpTo(time) {
-                                        var sound = document.querySelector("#audio-button audio-button2");
+                                        var sound = document.querySelector(
+                                            "#audio-button #audio-button2 #audio-button3 #audio-button4");
                                         sound.currentTime = time;
                                     }
                                 </script>
@@ -246,15 +247,16 @@
                                 <!-- Model Viewer Starts -->
 
                                 <model-viewer timeScale="0.2" id="orientation" class="w-100" bounds="tight"
-                                    src="models\final\visualising_shapes_scene_1_.glb" ar
+                                    src="models\final\solid shapes scene 1 updated.glb" ar
                                     ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
                                     poster="images\poster.webp" shadow-intensity="1" interaction-prompt="none"
-                                    orientation="0deg odeg odeg" alt="Solids" style="background-color: #70BCD1;">
+                                    orientation="0deg 0deg 0deg" alt="Solids" style="background-color: #70BCD1;">
                                     <div class="progress-bar hide" slot="progress-bar">
                                         <div class="update-bar"></div>
                                     </div>
                                     <div>
-                                        <audio style="width: 150px;" id="audio-button" controls src="/voiceover/visual_scene_1.mp3"></audio>
+                                        <audio style="width: 150px;" id="audio-button" controls
+                                            src="voiceover\solid_shape_scene 1.mp3"></audio>
                                     </div>
 
 
@@ -280,18 +282,7 @@
                                         <button id="side" style="border-radius: 18px;">Side View</button>
                                     </div>
 
-
-                                    <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0"
-                                        data-normal="1 0 0"></button>
-                                    <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1"
-                                        data-normal="1 0 0"></button>
-                                    <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1"
-                                        data-normal="0 1 0"></button>
-
-
-
-
-                                    <div class="slider">
+                                    <!-- <div class="slider">
                                         <div class="slides">
                                             <button id="option-btn" class="slide selected"
                                                 onclick="switchSrc(this, 'Chair')"
@@ -300,7 +291,7 @@
                                             <button id="option-btn" class="slide" onclick="switchSrc(this, 'Mixer')"
                                                 style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
                                         </div>
-                                    </div>
+                                    </div> -->
 
 
 
@@ -444,14 +435,15 @@
 
 
                                 <model-viewer timescale="0.5" id="orientation2" class="w-100" bounds="tight"
-                                    src="models\visualising_shapes_scene_2_.glb" ar
-                                    ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
-                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto">
+                                    src="models\final\01.glb" ar ar-modes="scene-viewer webxr quick-look"
+                                    camera-controls environment-image="neutral" poster="images\poster.webp"
+                                    shadow-intensity="1" interaction-prompt="auto" orientation="0deg 0deg 0deg">
                                     <div class="progress-bar hide" slot="progress-bar">
                                         <div class="update-bar"></div>
                                     </div>
                                     <div>
-                                        <audio style="width: 150px;" id="audio-button2" controls src="/voiceover/visual_scene_2.mp3"></audio>
+                                        <audio style="width: 150px;" id="audio-button2" controls
+                                            src="voiceover\visual_scene_1.mp3"></audio>
                                     </div>
                                     <button id="ar-button">
                                         <!-- View in Your Space -->
@@ -466,6 +458,14 @@
                                         <button id="front2" style="border-radius: 18px;">Front View</button>
                                         <button id="side2" style="border-radius: 18px;">Side View</button>
                                     </div>
+
+
+                                    <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0"
+                                        data-normal="1 0 0"></button>
+                                    <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1"
+                                        data-normal="1 0 0"></button>
+                                    <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1"
+                                        data-normal="0 1 0"></button>
 
 
 
@@ -551,6 +551,12 @@
 
 
 
+
+
+
+
+
+
                         <!-- <div class="col-lg-6">
                     <div class="row inner-row">
                         <div class="col-lg-12 mb-4">
@@ -571,21 +577,316 @@
                 </div> -->
                     </div>
                 </div>
+
+
+
+                <div style="margin-top: 30px;" class="col-lg-6 md-pb ">
+                    <div class="row card-bg">
+                        <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
+                            <div class="image-wrapper">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5">Solid Shapes -
+                                    Example
+                                </h2>
+
+
+
+                                <model-viewer timescale="0.5" id="orientation3" class="w-100" bounds="tight"
+                                    src="models\final\solid shapes scene 2 updated.glb" ar
+                                    ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
+                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto"
+                                    style="background-color: #bef8c3;" orientation="0deg 0deg 0deg">
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                    <div>
+                                        <audio style="width: 150px;" id="audio-button3" controls
+                                            src="voiceover\solid_shape_scene_2.mp3"></audio>
+                                    </div>
+                                    <button id="ar-button">
+                                        <!-- View in Your Space -->
+                                    </button>
+                                    <!-- <div id="ar-prompt">
+                                        <img src="images\ar_hand_prompt.png">
+                                    </div> -->
+
+
+                                    <div style="margin-top: 5px; margin-left: 5px;">
+                                        <button id="top2" style="border-radius: 18px;">Top View</button>
+                                        <button id="front2" style="border-radius: 18px;">Front View</button>
+                                        <button id="side2" style="border-radius: 18px;">Side View</button>
+                                    </div>
+
+
+
+                                </model-viewer>
+
+                                <style>
+                                    #more2 {
+                                        display: none;
+                                    }
+                                </style>
+                                <br>
+                                <p> There are 3 Different views that help visualise a solid<span
+                                        id="dots1">...</span><span id="more2"><br><br>
+
+                                        ➤Top View<br><br>
+                                        ➤Front View<br><br>
+
+                                        ➤Side View</span></p>
+                                <button onclick="myFunction1()" id="myBtn1">Read more</button>
+
+                                <script>
+                                    function myFunction1() {
+                                        var dots1 = document.getElementById("dots1");
+                                        var moreText1 = document.getElementById("more1");
+                                        var btnText1 = document.getElementById("myBtn1");
+
+                                        if (dots1.style.display === "none") {
+                                            dots1.style.display = "inline";
+                                            btnText1.innerHTML = "Read more";
+                                            moreText1.style.display = "none";
+                                        } else {
+                                            dots1.style.display = "none";
+                                            btnText1.innerHTML = "Read less";
+                                            moreText1.style.display = "inline";
+                                        }
+                                    }
+                                </script>
+
+
+                                <script type="text/javascript">
+                                    const modelViewerTransform2 = document.getElementById('orientation3');
+                                    // console.log(modelViewerTransform2);
+                                    const topview2 = document.querySelector('#top2');
+                                    // console.log(topview2);
+                                    const sideview2 = document.querySelector('#side2');
+                                    const frontview2 = document.querySelector('#front2');
+
+                                    topview2.addEventListener('click', () => {
+                                        modelViewerTransform2.orientation = `30deg 30deg 30deg`;
+                                    });
+                                    frontview2.addEventListener('click', () => {
+                                        modelViewerTransform2.orientation = `0deg 0deg 0deg`;
+                                    });
+                                    sideview2.addEventListener('click', () => {
+                                        modelViewerTransform2.orientation = `0deg 00deg 270deg`;
+                                    });
+                                </script>
+
+
+                                <script>
+                                    window.addEventListener("load", () => {
+                                        Sync("#orientation3", "#audio-button3");
+                                    });
+                                </script>
+
+
+                                <!-- <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise"> -->
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="align-left col-lg-6">
+
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
+                                    class="btn btn-white display-7" href="#">Photoshop</a></div> -->
+                        </div>
+                        <div class="align-right col-lg-6">
+
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
+                                        class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get
+                                    Started</a></div> -->
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        <!-- <div class="col-lg-6">
+                    <div class="row inner-row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card2">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.</h2>
+                                <div class="mbr-section-btn align-left card-btn"><a class="btn btn-white display-7"
+                                        href="#">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card3">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Nullam consectetur
+                                    dolor vel ex ullamcorper, non viverra neque aliquet. Vivamus sed nulla rhoncus.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+
+
+
+                <div style="margin-top: 30px;" class="col-lg-6 md-pb ">
+                    <div class="row card-bg">
+                        <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
+                            <div class="image-wrapper">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5"> Solid
+                                    Shapes - Projection
+                                </h2>
+
+
+
+                                <model-viewer timescale="0.5" id="orientation4" class="w-100" bounds="tight"
+                                    src="models\visualising_shapes_scene_2_.glb" ar
+                                    ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
+                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto" orientation="0deg 0deg 0deg" style="background-color: bisque;">
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                    <div>
+                                        <audio style="width: 150px;" id="audio-button4" controls
+                                            src="/voiceover/visual_scene_2.mp3"></audio>
+                                    </div>
+                                    <button id="ar-button">
+                                        <!-- View in Your Space -->
+                                    </button>
+                                    <!-- <div id="ar-prompt">
+                                        <img src="images\ar_hand_prompt.png">
+                                    </div> -->
+
+
+                                    <div style="margin-top: 5px; margin-left: 5px;">
+                                        <button id="top2" style="border-radius: 18px;">Top View</button>
+                                        <button id="front2" style="border-radius: 18px;">Front View</button>
+                                        <button id="side2" style="border-radius: 18px;">Side View</button>
+                                    </div>
+
+
+
+                                </model-viewer>
+
+                                <style>
+                                    #more3 {
+                                        display: none;
+                                    }
+                                </style>
+                                <br>
+                                <p> There are 3 Different views that help visualise a solid<span
+                                        id="dots1">...</span><span id="more3"><br><br>
+
+                                        ➤Top View<br><br>
+                                        ➤Front View<br><br>
+
+                                        ➤Side View</span></p>
+                                <button onclick="myFunction1()" id="myBtn1">Read more</button>
+
+                                <script>
+                                    function myFunction1() {
+                                        var dots1 = document.getElementById("dots1");
+                                        var moreText1 = document.getElementById("more1");
+                                        var btnText1 = document.getElementById("myBtn1");
+
+                                        if (dots1.style.display === "none") {
+                                            dots1.style.display = "inline";
+                                            btnText1.innerHTML = "Read more";
+                                            moreText1.style.display = "none";
+                                        } else {
+                                            dots1.style.display = "none";
+                                            btnText1.innerHTML = "Read less";
+                                            moreText1.style.display = "inline";
+                                        }
+                                    }
+                                </script>
+
+
+                                <script type="text/javascript">
+                                    const modelViewerTransform2 = document.getElementById('orientation4');
+                                    // console.log(modelViewerTransform2);
+                                    const topview2 = document.querySelector('#top2');
+                                    // console.log(topview2);
+                                    const sideview2 = document.querySelector('#side2');
+                                    const frontview2 = document.querySelector('#front2');
+
+                                    topview2.addEventListener('click', () => {
+                                        modelViewerTransform2.orientation = `30deg 30deg 30deg`;
+                                    });
+                                    frontview2.addEventListener('click', () => {
+                                        modelViewerTransform2.orientation = `0deg 0deg 0deg`;
+                                    });
+                                    sideview2.addEventListener('click', () => {
+                                        modelViewerTransform2.orientation = `0deg 00deg 270deg`;
+                                    });
+                                </script>
+
+
+                                <script>
+                                    window.addEventListener("load", () => {
+                                        Sync("#orientation4", "#audio-button4");
+                                    });
+                                </script>
+
+
+                                <!-- <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise"> -->
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="align-left col-lg-6">
+
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
+                                    class="btn btn-white display-7" href="#">Photoshop</a></div> -->
+                        </div>
+                        <div class="align-right col-lg-6">
+
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
+                                        class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get
+                                    Started</a></div> -->
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        <!-- <div class="col-lg-6">
+                    <div class="row inner-row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card2">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.</h2>
+                                <div class="mbr-section-btn align-left card-btn"><a class="btn btn-white display-7"
+                                        href="#">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card3">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Nullam consectetur
+                                    dolor vel ex ullamcorper, non viverra neque aliquet. Vivamus sed nulla rhoncus.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+
+
+
+
+
     </section>
 
     <!-- <section data-bs-version="5" class="article2 cid-sHbVfxanBa" id="content02-j">
-
-
-
-
-
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <h1 class="mbr-section-title align-left mbr-fonts-style mb-3 display-5">About Us</h1>
-
                 </div>
-
                 <div class="col-lg-12">
                     <p class="mbr-text align-left mbr-fonts-style display-5">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Ut faucibus mi est, vel mattis enim malesuada at. Suspendisse potenti. Mauris
@@ -597,12 +898,9 @@
     </section> -->
 
     <!-- <section data-bs-version="5" class="features2 cid-sHbTWpU6kH" id="features02-2">
-
-
         <div class="container">
             <div class="mbr-section-head pb-4">
                 <h4 class="mbr-section-title mbr-fonts-style align-left mb-0 display-5">Our Features</h4>
-
             </div>
             <div class="row row-bg justify-content-center">
                 <div class="сol-12 col-md-12 col-lg-4 md-pb">
@@ -616,24 +914,16 @@
                             <img src="assets/images/features1.jpg">
                         </div>
                         <div class="item-content">
-
                             <div class="mbr-flex mt-3">
-
                                 <div class="mbr-section-btn align-right"><a href="#"
                                         class="btn item-btn btn-white display-7" target="_blank"><span
                                             class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>Get
                                         Started</a></div>
                                 <p class="price align-right mb-0 mbr-fonts-style display-5">12$</p>
-
-
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
-
                 <div class="сol-12 col-md-12 col-lg-4 md-pb">
                     <div class="card2 item-wrapper">
                         <div class="item-content">
@@ -645,24 +935,16 @@
                             <img src="assets/images/features2.jpg">
                         </div>
                         <div class="item-content">
-
                             <div class="mbr-flex mt-3">
-
                                 <div class="mbr-section-btn align-right"><a href="#"
                                         class="btn item-btn btn-white display-7" target="_blank"><span
                                             class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>Get
                                         Started</a></div>
                                 <p class="price align-right mb-0 mbr-fonts-style display-5">18$</p>
-
-
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
-
                 <div class="сol-12 col-md-12 col-lg-4">
                     <div class="card3 item-wrapper">
                         <div class="item-content">
@@ -674,27 +956,19 @@
                             <img src="assets/images/features3.jpg">
                         </div>
                         <div class="item-content">
-
                             <div class="mbr-flex mt-3">
-
                                 <div class="mbr-section-btn align-right"><a href="#"
                                         class="btn item-btn btn-white display-7" target="_blank"><span
                                             class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>Get
                                         Started</a></div>
                                 <p class="price align-right mb-0 mbr-fonts-style display-5">14$</p>
-
-
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section data-bs-version="5" class="progress-bars1 cid-sHbUNfResk" id="progress01-d"> -->
 
 
@@ -702,11 +976,8 @@
 
 
     <!-- <div class="container">
-
-
             <div class="row">
                 <div class="col-md-12 col-lg-6 text-elements pb-4 md-pb">
-
                     <h4 class="section-content-title pb-3 align-left mbr-fonts-style display-2">Our Skills</h4>
                     <p class="section-content-text align-left mbr-fonts-style display-7">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis, faucibus at tincidunt
@@ -732,7 +1003,6 @@
                         <progress class="progress progress-primary " max="100" value="92">
                         </progress>
                     </div>
-
                     <div class="progress2 pb-5">
                         <div class="title-wrap">
                             <div class="progressbar-title mbr-fonts-style display-7">
@@ -749,7 +1019,6 @@
                         <progress class="progress progress-primary" max="100" value="71">
                         </progress>
                     </div>
-
                     <div class="progress3 pb-5">
                         <div class="title-wrap">
                             <div class="progressbar-title mbr-fonts-style display-7">
@@ -766,18 +1035,12 @@
                         <progress class="progress progress-primary" max="100" value="53">
                         </progress>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>
     </section> -->
 
     <!-- <section data-bs-version="5" class="team2 cid-sHbUDLGPF2" id="team02-8">
-
-
         <div class="container">
             <div class="mbr-section-head">
                 <h4 class="mbr-section-title align-left mbr-fonts-style mb-0 display-5">
@@ -841,29 +1104,19 @@
                                 Profile</a></div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section> -->
 
     <!-- <section data-bs-version="5" class="testimonails1 carousel slide testimonials-slider cid-sHbUEPEpmc"
         data-interval="false" data-bs-interval="false" id="testimonials01-9">
-
-
-
-
-
         <div class="text-center container">
             <h3 class="mb-4 mbr-fonts-style display-5">
                 What Our Users Say
             </h3>
-
             <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="carousel"
                 data-bs-ride="carousel" data-interval="8000" data-bs-interval="8000">
                 <div class="carousel-inner">
-
-
-
                     <div class="carousel-item">
                         <div class="user col-md-8">
                             <div class="user_image">
@@ -932,13 +1185,11 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="carousel-controls">
                     <a class="carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev">
                         <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span>
                         <span class="sr-only visually-hidden">Previous</span>
                     </a>
-
                     <a class="carousel-control-next" role="button" data-slide="next" data-bs-slide="next">
                         <span aria-hidden="true" class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
                         <span class="sr-only visually-hidden">Next</span>
@@ -956,32 +1207,21 @@
                         <img class="w-100" src="assets/images/features4.jpg" alt="Mobirise">
                     </div>
                 </div>
-
                 <div class="align-left col-lg-6">
-
                     <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Photoshop</a> <a
                             class="btn btn-white display-7" href="#">Illustrator</a> <a class="btn btn-white display-7"
                             href="#/">InDesign</a></div>
                 </div>
-
-
-
                 <div class="align-right col-lg-6">
-
                     <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
                                 class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
-
     </section> -->
 
     <!-- <section data-bs-version="5" class="clients1 cid-sHbUG1G3da" id="clients01-a">
-
-
-
-
         <div class="container">
             <div class="row justify-content-center">
                 <div class="card col-12 col-md-6 col-lg-4">
@@ -990,7 +1230,6 @@
                             <img src="assets/images/1.png" alt="Mobirise">
                         </div>
                         <div class="card-box align-center">
-
                             <h5 class="card-title mbr-fonts-style mb-3 display-5">
                                 Our partner
                             </h5>
@@ -1007,7 +1246,6 @@
                             <img src="assets/images/2.png" alt="Mobirise">
                         </div>
                         <div class="card-box align-center">
-
                             <h5 class="card-title mbr-fonts-style mb-3 display-5">
                                 Our partner
                             </h5>
@@ -1024,7 +1262,6 @@
                             <img src="assets/images/3.png" alt="Mobirise">
                         </div>
                         <div class="card-box align-center">
-
                             <h5 class="card-title mbr-fonts-style mb-3 display-5">
                                 Our partner
                             </h5>
@@ -1035,18 +1272,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section> -->
 
     <!-- <section data-bs-version="5" class="form2 cid-sHbUYcSqsL" id="form02-e">
-
-
         <div class="container">
             <div class="mbr-section-head">
                 <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">Subscribe</h3>
-
             </div>
             <div class="row justify-content-center mt-4">
                 <div class="col-lg-8 mx-auto" data-form-type="formoid"> -->
@@ -1159,19 +1392,13 @@
     </section> -->
 
     <!-- <section data-bs-version="5" class="map1 cid-sHbUZzu43H" id="map01-f">
-
-
         <div>
-
             <div class="google-map"><iframe frameborder="0" style="border:0"
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk89J4FSunMF33ruMVWJaJht_Ro0kvoXs&amp;q=350%205th%20Ave,%20New%20York,%20NY%2010118"
                     allowfullscreen=""></iframe></div>
         </div>
     </section>
-
     <section data-bs-version="5" class="footer1 cid-sHbV2lXHiy" once="footers" id="footer01-h">
-
-
         <div class="container">
             <div class="media-container-row align-center mbr-white">
                 <div class="col-12">

@@ -95,6 +95,34 @@ model-viewer {
   line-height: 36px;
 }
 
+#audio-button3{
+  position: absolute;
+  left: 20%;
+  transform: translateX(-31%);
+  white-space: nowrap;
+  bottom: 15px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+}
+
+#audio-button4{
+  position: absolute;
+  left: 20%;
+  transform: translateX(-31%);
+  white-space: nowrap;
+  bottom: 15px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+}
+
 
 #ar-button:active {
   background-color: #E8EAED;
