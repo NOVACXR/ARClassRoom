@@ -233,28 +233,32 @@
                                         var playRequest = document.querySelector("#overlay");
                                         playRequest.classList.add("hide");
 
-                                        var sound = document.querySelector("#audio-button");
+                                        var sound = document.querySelector("#audio-button #audio-button2");
                                         sound.play();
                                     }
 
                                     function jumpTo(time) {
-                                        var sound = document.querySelector("#audio-button");
+                                        var sound = document.querySelector("#audio-button audio-button2");
                                         sound.currentTime = time;
                                     }
                                 </script>
 
                                 <!-- Model Viewer Starts -->
 
-                                <model-viewer timescale="0.5" id="orientation" class="w-100" bounds="tight"
-                                    src="models\final\visualising_shapes_scene_1_.glb" ar timeScale=0.4
+                                <model-viewer timeScale="0.2" id="orientation" class="w-100" bounds="tight"
+                                    src="models\final\visualising_shapes_scene_1_.glb" ar
                                     ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
-                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="none" orientation="0deg odeg odeg" alt="Solids" style="background-color: #70BCD1;">
+                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="none"
+                                    orientation="0deg odeg odeg" alt="Solids" style="background-color: #70BCD1;">
                                     <div class="progress-bar hide" slot="progress-bar">
                                         <div class="update-bar"></div>
                                     </div>
                                     <div>
-                                        <audio id="audio-button" controls src="/voiceover/visual_scene_1.mp3"></audio>
+                                        <audio style="width: 150px;" id="audio-button" controls src="/voiceover/visual_scene_1.mp3"></audio>
                                     </div>
+
+
+
                                     <!-- <div id="overlay" class="show">
                                         <div id="request-press-play">
                                             <button onclick="playNow()"> -->
@@ -262,6 +266,7 @@
                                     <!-- </button>
                                         </div>
                                     </div> -->
+
                                     <button id="ar-button">
                                         <!-- View in your space -->
                                     </button>
@@ -284,11 +289,25 @@
                                         data-normal="0 1 0"></button>
 
 
+
+
+                                    <div class="slider">
+                                        <div class="slides">
+                                            <button id="option-btn" class="slide selected"
+                                                onclick="switchSrc(this, 'Chair')"
+                                                style="background-image: url('/images/s1.png');">
+                                            </button>
+                                            <button id="option-btn" class="slide" onclick="switchSrc(this, 'Mixer')"
+                                                style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
+                                        </div>
+                                    </div>
+
+
+
                                 </model-viewer>
 
-
                                 <style>
-                                    #more{
+                                    #more {
                                         display: none;
                                     }
                                 </style>
@@ -432,7 +451,7 @@
                                         <div class="update-bar"></div>
                                     </div>
                                     <div>
-                                        <audio id="audio-button" controls src="/voiceover/visual_scene_2.mp3"></audio>
+                                        <audio style="width: 150px;" id="audio-button2" controls src="/voiceover/visual_scene_2.mp3"></audio>
                                     </div>
                                     <button id="ar-button">
                                         <!-- View in Your Space -->
@@ -449,38 +468,40 @@
                                     </div>
 
 
+
                                 </model-viewer>
 
                                 <style>
-                                    #more1{
-                                        display: none;                                        
+                                    #more1 {
+                                        display: none;
                                     }
                                 </style>
                                 <br>
-                                <p> There are 3 Different views that help visualise a solid<span id="dots1">...</span><span id="more1"><br><br>
-                               
-                                    ➤Top View<br><br>
-                                    ➤Front View<br><br>
-                                   
-                                    ➤Side View</span></p>
+                                <p> There are 3 Different views that help visualise a solid<span
+                                        id="dots1">...</span><span id="more1"><br><br>
+
+                                        ➤Top View<br><br>
+                                        ➤Front View<br><br>
+
+                                        ➤Side View</span></p>
                                 <button onclick="myFunction1()" id="myBtn1">Read more</button>
-                               
+
                                 <script>
-                                function myFunction1() {
-                                  var dots1 = document.getElementById("dots1");
-                                  var moreText1 = document.getElementById("more1");
-                                  var btnText1 = document.getElementById("myBtn1");
-                               
-                                  if (dots1.style.display === "none") {
-                                    dots1.style.display = "inline";
-                                    btnText1.innerHTML = "Read more";
-                                    moreText1.style.display = "none";
-                                  } else {
-                                    dots1.style.display = "none";
-                                    btnText1.innerHTML = "Read less";
-                                    moreText1.style.display = "inline";
-                                  }
-                                }
+                                    function myFunction1() {
+                                        var dots1 = document.getElementById("dots1");
+                                        var moreText1 = document.getElementById("more1");
+                                        var btnText1 = document.getElementById("myBtn1");
+
+                                        if (dots1.style.display === "none") {
+                                            dots1.style.display = "inline";
+                                            btnText1.innerHTML = "Read more";
+                                            moreText1.style.display = "none";
+                                        } else {
+                                            dots1.style.display = "none";
+                                            btnText1.innerHTML = "Read less";
+                                            moreText1.style.display = "inline";
+                                        }
+                                    }
                                 </script>
 
 
@@ -500,6 +521,13 @@
                                     });
                                     sideview2.addEventListener('click', () => {
                                         modelViewerTransform2.orientation = `0deg 00deg 270deg`;
+                                    });
+                                </script>
+
+
+                                <script>
+                                    window.addEventListener("load", () => {
+                                        Sync("#orientation2", "#audio-button2");
                                     });
                                 </script>
 
