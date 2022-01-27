@@ -276,11 +276,11 @@
                                         <img src="images\ar_hand_prompt.png">
                                     </div> -->
 
-                                    <div style="margin-top: 5px; margin-left: 5px;">
+                                    <!-- <div style="margin-top: 5px; margin-left: 5px;">
                                         <button id="top" style="border-radius: 18px;">Top View</button>
                                         <button id="front" style="border-radius: 18px;">Front View</button>
                                         <button id="side" style="border-radius: 18px;">Side View</button>
-                                    </div>
+                                    </div> -->
 
                                     <!-- <div class="slider">
                                         <div class="slides">
@@ -338,7 +338,7 @@
                                 </script>
 
 
-                                <script>
+                                <!-- <script>
                                     const modelViewerTransform = document.getElementById('orientation');
                                     console.log(modelViewerTransform);
                                     const topview = document.querySelector('#top');
@@ -384,7 +384,7 @@
                                         modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]')
                                             .textContent = `Top view`;
                                     })
-                                </script>
+                                </script> -->
 
                                 <!-- Script for sync audio voice over! -->
 
@@ -453,11 +453,11 @@
                                     </div> -->
 
 
-                                    <div style="margin-top: 5px; margin-left: 5px;">
+                                    <!-- <div style="margin-top: 5px; margin-left: 5px;">
                                         <button id="top2" style="border-radius: 18px;">Top View</button>
                                         <button id="front2" style="border-radius: 18px;">Front View</button>
                                         <button id="side2" style="border-radius: 18px;">Side View</button>
-                                    </div>
+                                    </div> -->
 
 <!-- 
                                     <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0"
@@ -505,7 +505,7 @@
                                 </script>
 
 
-                                <script type="text/javascript">
+                                <!-- <script type="text/javascript">
                                     const modelViewerTransform2 = document.getElementById('orientation2');
                                     // console.log(modelViewerTransform2);
                                     const topview2 = document.querySelector('#top2');
@@ -522,7 +522,7 @@
                                     sideview2.addEventListener('click', () => {
                                         modelViewerTransform2.orientation = `0deg 00deg 270deg`;
                                     });
-                                </script>
+                                </script> -->
 
 
                                 <script>
@@ -610,11 +610,11 @@
                                     </div> -->
 
 
-                                    <div style="margin-top: 5px; margin-left: 5px;">
+                                    <!-- <div style="margin-top: 5px; margin-left: 5px;">
                                         <button id="top3" style="border-radius: 18px;">Top View</button>
                                         <button id="front3" style="border-radius: 18px;">Front View</button>
                                         <button id="side3" style="border-radius: 18px;">Side View</button>
-                                    </div>
+                                    </div> -->
 
 
 
@@ -654,7 +654,7 @@
                                 </script>
 
 
-                                <script type="text/javascript">
+                                <!-- <script type="text/javascript">
                                     const modelViewerTransform3 = document.getElementById('orientation3');
                                     // console.log(modelViewerTransform2);
                                     const topview3 = document.getElementById('top3');
@@ -663,7 +663,8 @@
                                     const frontview3 = document.getElementById('front3');
 
                                     topview3.addEventListener('click', () => {
-                                        modelViewerTransform3.orientation = `30deg 30deg 30deg`;
+                                        modelViewerTransform3.cameraOrbit = `0deg 90deg 100%`;
+                                        modelViewerTransform3.orientation = `0deg 90deg 0deg`;
                                     });
                                     frontview3.addEventListener('click', () => {
                                         modelViewerTransform3.orientation = `0deg 0deg 0deg`;
@@ -671,7 +672,7 @@
                                     sideview3.addEventListener('click', () => {
                                         modelViewerTransform3.orientation = `0deg 00deg 270deg`;
                                     });
-                                </script>
+                                </script> -->
 
 
                                 <script>
@@ -759,9 +760,8 @@
 
 
                                     <div style="margin-top: 5px; margin-left: 5px;">
-                                        <button id="top4" style="border-radius: 18px;">Top View</button>
-                                        <button id="front4" style="border-radius: 18px;">Front View</button>
-                                        <button id="side4" style="border-radius: 18px;">Side View</button>
+                                        <button id="reset4" style="border-radius: 18px;">Reset View</button>
+                                      
                                     </div>
 
 
@@ -805,20 +805,21 @@
                                 <script type="text/javascript">
                                     const modelViewerTransform4 = document.getElementById('orientation4');
                                     // console.log(modelViewerTransform2);
-                                    const topview4 = document.getElementById('top4');
+                                    const reset = document.getElementById('reset4');
                                     // console.log(topview2);
-                                    const sideview4 = document.getElementById('side4');
-                                    const frontview4 = document.getElementById('front4');
+                                    // const sideview4 = document.getElementById('side4');
+                                    // const frontview4 = document.getElementById('front4');
 
-                                    topview4.addEventListener('click', () => {
-                                        modelViewerTransform4.orientation = `30deg 30deg 30deg`;
+                                    reset.addEventListener('click', () => {
+                                        modelViewerTransform4.cameraOrbit = `0deg 90deg 75%`;
+                                        modelViewerTransform4.orientation = `0deg 20deg -30deg`;
                                     });
-                                    frontview4.addEventListener('click', () => {
-                                        modelViewerTransform4.orientation = `0deg 0deg 0deg`;
-                                    });
-                                    sideview4.addEventListener('click', () => {
-                                        modelViewerTransform4.orientation = `0deg 00deg 270deg`;
-                                    });
+                                    // reset.addEventListener('click', () => {
+                                    //     modelViewerTransform4.orientation = `0deg 0deg 0deg`;
+                                    // });
+                                    // reset.addEventListener('click', () => {
+                                    //     modelViewerTransform4.orientation = `0deg 00deg 270deg`;
+                                    // });
                                 </script>
 
 
@@ -1207,8 +1208,8 @@
                         <model-viewer  timescale="0.5" id="orientation5" class="w-100" bounds="tight"
                                     src="models\final\shapes_asses2.glb" ar
                                     ar-modes="scene-viewer webxr quick-look" environment-image="neutral"
-                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto" orientation="0deg 0deg 0deg" style="background-color: rgb(255, 166, 166); height: 450px;"
-                                    camera-orbit = "0deg 90deg 70%">
+                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto" orientation="0deg 0deg 0deg" style="background-color: rgb(255, 208, 208); height: 450px;"
+                                    camera-orbit = "0deg 90deg 70%" camera-controls>
                                     <div class="progress-bar hide" slot="progress-bar">
                                         <div class="update-bar"></div>
                                     </div>
@@ -1240,12 +1241,15 @@
                                     const frontview5 = document.getElementById('front5');
 
                                     topview5.addEventListener('click', () => {
+                                        modelViewerTransform5.cameraOrbit = `0deg 90deg 70%`;
                                         modelViewerTransform5.orientation = `0deg 90deg 0deg`;
                                     });
                                     frontview5.addEventListener('click', () => {
+                                        modelViewerTransform5.cameraOrbit = `0deg 90deg 70%`;
                                         modelViewerTransform5.orientation = `0deg 0deg 0deg`;
                                     });
                                     sideview5.addEventListener('click', () => {
+                                        modelViewerTransform5.cameraOrbit = `0deg 90deg 70%`;
                                         modelViewerTransform5.orientation = `0deg 00deg 270deg`;
                                     });
                                 </script>
