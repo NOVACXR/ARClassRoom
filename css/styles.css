@@ -48,15 +48,15 @@ model-viewer {
 #ar-button {
   background-image: url(/images/arbutton.png);
   background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-position: 50% 50%;
-  background-color: #91B4FA;
+  background-size: 36px 36px;
+  /* background-position: 12px 50%; */
+  background-color: #fff;
   position: absolute;
-  left: 90%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  bottom: 16px;
-  padding: 0px 16px 0px 40px;
+  left: 50%;
+  transform: translateX(-0%);
+  /* white-space: nowrap; */
+  bottom: 10px;
+  padding: 15px 15px 15px 20px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
   color:#4285f4;
@@ -64,8 +64,8 @@ model-viewer {
   line-height: 36px;
   border-radius: 18px;
   border: 1px solid #DADCE0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 #audio-button{
   position: absolute;
