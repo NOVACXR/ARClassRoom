@@ -424,7 +424,173 @@
                 </div>
 
 
-                <div class="col-lg-6 md-pb ">
+
+
+
+                <div  class="col-lg-6 md-pb ">
+                    <div class="row card-bg">
+                        <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
+                            <div class="image-wrapper">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5">Solid Shapes -
+                                    Example
+                                </h2>
+
+
+
+                                <model-viewer timescale="0.5" id="orientation3" class="w-100" bounds="tight"
+                                    src="models\final\solid shapes scene 2 updated.glb" ar
+                                    ar-modes="webxr" camera-controls environment-image="neutral"
+                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto"
+                                    style="background-color: #bef8c3;">
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                    <div>
+                                        <audio style="width: 150px;" id="audio-button3" controls
+                                            src="voiceover\solid_shape_scene_2.mp3"></audio>
+                                    </div>
+                                    <!-- <div style="margin-top: 5px; margin-left: 5px;">
+                                        <button id="top3" style="border-radius: 18px;">Top View</button>
+                                        <button id="front3" style="border-radius: 18px;">Front View</button>
+                                        <button id="side3" style="border-radius: 18px;">Side View</button>
+                                    </div> -->
+
+                                    <!-- <button slot="ar-button" id="ar-button">
+                                       
+                                    </button> -->
+                                    <div id="ar-prompt">
+                                        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                                    </div>
+
+
+
+                                </model-viewer>
+
+                                <style>
+                                    #more2 {
+                                        display: none;
+                                    }
+                                </style>
+                                <br>
+                                <p> A Solid solid is nothing but a stack of 2d shapes. <span
+                                        id="dots2">...</span><span id="more2"><br><br>
+
+                                            For instance, if you stack a lot of squares linearly together, you get a cube and similarly if you stack a lot of rectangles together you get a cuboid.<br><br>
+                                            What If you stack the same rectangles in a circular manner like this? What will you end up with? Yes, you will end up with a Rectangle.<br><br>
+
+                                            That is not the only way to create a cylinder right? If I stack a lot of circles linearly It will again result in a cylinder.</span></p>
+                                <button onclick="myFunction2()" id="myBtn2">Read more</button>
+
+                                <script>
+                                    function myFunction2() {
+                                        var dots2 = document.getElementById("dots2");
+                                        var moreText2 = document.getElementById("more2");
+                                        var btnText2 = document.getElementById("myBtn2");
+
+                                        if (dots2.style.display === "none") {
+                                            dots2.style.display = "inline";
+                                            btnText2.innerHTML = "Read more";
+                                            moreText2.style.display = "none";
+                                        } else {
+                                            dots2.style.display = "none";
+                                            btnText2.innerHTML = "Read less";
+                                            moreText2.style.display = "inline";
+                                        }
+                                    }
+                                </script>
+
+
+                                <!-- <script type="text/javascript">
+                                    const modelViewerTransform3 = document.getElementById('orientation3');
+                                    // console.log(modelViewerTransform2);
+                                    const topview3 = document.getElementById('top3');
+                                    // console.log(topview2);
+                                    const sideview3 = document.getElementById('side3');
+                                    const frontview3 = document.getElementById('front3');
+
+                                    topview3.addEventListener('click', () => {
+                                        modelViewerTransform3.cameraOrbit = `0deg 90deg 100%`;
+                                        modelViewerTransform3.orientation = `0deg 90deg 0deg`;
+                                    });
+                                    frontview3.addEventListener('click', () => {
+                                        modelViewerTransform3.orientation = `0deg 0deg 0deg`;
+                                    });
+                                    sideview3.addEventListener('click', () => {
+                                        modelViewerTransform3.orientation = `0deg 00deg 270deg`;
+                                    });
+                                </script> -->
+
+
+                                <script>
+                                    window.addEventListener("load", () => {
+                                        Sync("#orientation3", "#audio-button3");
+                                    });
+                                </script>
+
+
+                                <!-- <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise"> -->
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="align-left col-lg-6">
+
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
+                                    class="btn btn-white display-7" href="#">Photoshop</a></div> -->
+                        </div>
+                        <div class="align-right col-lg-6">
+
+                            <!-- <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
+                                        class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get
+                                    Started</a></div> -->
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        <!-- <div class="col-lg-6">
+                    <div class="row inner-row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card2">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.</h2>
+                                <div class="mbr-section-btn align-left card-btn"><a class="btn btn-white display-7"
+                                        href="#">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card3">
+                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Nullam consectetur
+                                    dolor vel ex ullamcorper, non viverra neque aliquet. Vivamus sed nulla rhoncus.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div style="margin-top: 30px;" class="col-lg-6 md-pb ">
                     <div class="row card-bg">
                         <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
                             <div class="image-wrapper">
@@ -581,153 +747,7 @@
 
 
 
-                <div style="margin-top: 30px;" class="col-lg-6 md-pb ">
-                    <div class="row card-bg">
-                        <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
-                            <div class="image-wrapper">
-                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-4 display-5">Solid Shapes -
-                                    Example
-                                </h2>
-
-
-
-                                <model-viewer timescale="0.5" id="orientation3" class="w-100" bounds="tight"
-                                    src="models\final\solid shapes scene 2 updated.glb" ar
-                                    ar-modes="webxr" camera-controls environment-image="neutral"
-                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto"
-                                    style="background-color: #bef8c3;">
-                                    <div class="progress-bar hide" slot="progress-bar">
-                                        <div class="update-bar"></div>
-                                    </div>
-                                    <div>
-                                        <audio style="width: 150px;" id="audio-button3" controls
-                                            src="voiceover\solid_shape_scene_2.mp3"></audio>
-                                    </div>
-                                    <!-- <div style="margin-top: 5px; margin-left: 5px;">
-                                        <button id="top3" style="border-radius: 18px;">Top View</button>
-                                        <button id="front3" style="border-radius: 18px;">Front View</button>
-                                        <button id="side3" style="border-radius: 18px;">Side View</button>
-                                    </div> -->
-
-                                    <!-- <button slot="ar-button" id="ar-button">
-                                       
-                                    </button> -->
-                                    <div id="ar-prompt">
-                                        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-                                    </div>
-
-
-
-                                </model-viewer>
-
-                                <style>
-                                    #more2 {
-                                        display: none;
-                                    }
-                                </style>
-                                <br>
-                                <p> A Solid solid is nothing but a stack of 2d shapes. <span
-                                        id="dots2">...</span><span id="more2"><br><br>
-
-                                            For instance, if you stack a lot of squares linearly together, you get a cube and similarly if you stack a lot of rectangles together you get a cuboid.<br><br>
-                                            What If you stack the same rectangles in a circular manner like this? What will you end up with? Yes, you will end up with a Rectangle.<br><br>
-
-                                            That is not the only way to create a cylinder right? If I stack a lot of circles linearly It will again result in a cylinder.</span></p>
-                                <button onclick="myFunction2()" id="myBtn2">Read more</button>
-
-                                <script>
-                                    function myFunction2() {
-                                        var dots2 = document.getElementById("dots2");
-                                        var moreText2 = document.getElementById("more2");
-                                        var btnText2 = document.getElementById("myBtn2");
-
-                                        if (dots2.style.display === "none") {
-                                            dots2.style.display = "inline";
-                                            btnText2.innerHTML = "Read more";
-                                            moreText2.style.display = "none";
-                                        } else {
-                                            dots2.style.display = "none";
-                                            btnText2.innerHTML = "Read less";
-                                            moreText2.style.display = "inline";
-                                        }
-                                    }
-                                </script>
-
-
-                                <!-- <script type="text/javascript">
-                                    const modelViewerTransform3 = document.getElementById('orientation3');
-                                    // console.log(modelViewerTransform2);
-                                    const topview3 = document.getElementById('top3');
-                                    // console.log(topview2);
-                                    const sideview3 = document.getElementById('side3');
-                                    const frontview3 = document.getElementById('front3');
-
-                                    topview3.addEventListener('click', () => {
-                                        modelViewerTransform3.cameraOrbit = `0deg 90deg 100%`;
-                                        modelViewerTransform3.orientation = `0deg 90deg 0deg`;
-                                    });
-                                    frontview3.addEventListener('click', () => {
-                                        modelViewerTransform3.orientation = `0deg 0deg 0deg`;
-                                    });
-                                    sideview3.addEventListener('click', () => {
-                                        modelViewerTransform3.orientation = `0deg 00deg 270deg`;
-                                    });
-                                </script> -->
-
-
-                                <script>
-                                    window.addEventListener("load", () => {
-                                        Sync("#orientation3", "#audio-button3");
-                                    });
-                                </script>
-
-
-                                <!-- <img class="w-100" src="assets/images/features2.jpg" alt="Mobirise"> -->
-                                <div class="line"></div>
-                            </div>
-                        </div>
-                        <div class="align-left col-lg-6">
-
-                            <!-- <div class="mbr-section-btn"><a class="btn btn-white display-7" href="#">Design</a> <a
-                                    class="btn btn-white display-7" href="#">Photoshop</a></div> -->
-                        </div>
-                        <div class="align-right col-lg-6">
-
-                            <!-- <div class="mbr-section-btn"><a class="btn btn-primary display-7" href="#"><span
-                                        class="mobi-mbri mobi-mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Get
-                                    Started</a></div> -->
-                        </div>
-
-
-
-
-
-
-
-
-
-
-                        <!-- <div class="col-lg-6">
-                    <div class="row inner-row">
-                        <div class="col-lg-12 mb-4">
-                            <div class="card2">
-                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Lorem ipsum
-                                    dolor sit amet, consectetur adipiscing elit.</h2>
-                                <div class="mbr-section-btn align-left card-btn"><a class="btn btn-white display-7"
-                                        href="#">Read More</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="card3">
-                                <h2 class="mbr-card-title align-left mbr-fonts-style mb-3 display-5">Nullam consectetur
-                                    dolor vel ex ullamcorper, non viverra neque aliquet. Vivamus sed nulla rhoncus.</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                    </div>
-                </div>
-
+             
 
 
                 <div style="margin-top: 30px;" class="col-lg-6 md-pb ">
