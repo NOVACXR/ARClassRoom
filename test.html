@@ -52,7 +52,7 @@
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]--> <model-viewer src="models\final\solid shapes scene 1 updated.glb" poster="assets\images\team3.jpg" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+        <![endif]--> <model-viewer src="models\final\solid shapes scene 1 updated.glb" poster="assets\images\team3.jpg" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls  alt="A 3D model carousel">
   
         <button slot="ar-button" id="ar-button">
             View in your space
@@ -66,8 +66,8 @@
         
           <div class="slider">
             <div class="slides">
-              <button class="slide selected" onclick="switchSrc(this, '01')" style="background-image: url('/assets/images/team3.jpg');">
-        
+              <button class="slide selected" onclick= "play()" style="background-image: url('/assets/images/team3.jpg');">
+                <audio id="audio" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
               </button><button class="slide" onclick="switchSrc(this, '02')" style="background-image: url('/assets/images/team3.jpg');">
         
               </button><button class="slide" onclick="switchSrc(this, 'solid_shapes_scene_2_part_1')" style="background-image: url('/assets/images/team3.jpg');">
@@ -77,6 +77,12 @@
               <!-- </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('assets\images\team3.jpg');">     -->
             </button></div>
           </div>
+          <script>
+            function play() {
+              var audio = document.getElementById("audio");
+              audio.play();
+            }
+          </script>
         </model-viewer>
         
         <script type="module">
