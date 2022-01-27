@@ -4,13 +4,14 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-         <!-- Site made with Mobirise Website Builder v5.4.0, https://mobirise.com -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Site made with Mobirise Website Builder v5.4.0, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Mobirise v5.4.0, mobirise.com">
@@ -48,45 +49,53 @@
             background-color: #f6bbcd;
         }
     </style>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]--> <model-viewer src="models\final\solid shapes scene 1 updated.glb" poster="assets\images\team3.jpg" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls autoplay  alt="A 3D model carousel">
-  
+        <![endif]-->
+    <model-viewer src="models\final\solid shapes scene 1 updated.glb" poster="assets\images\team3.jpg"
+        shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls autoplay
+        alt="A 3D model carousel">
+
         <button slot="ar-button" id="ar-button">
             View in your space
-          </button>
-        
-          
-        
-          <button id="ar-failure">
+        </button>
+
+
+
+        <button id="ar-failure">
             AR is not tracking!
-          </button>
-        
-          <div class="slider">
+        </button>
+
+        <div class="slider">
             <div class="slides">
-              <button class="slide " onclick= "play()" style="background-image: url('/assets/images/team3.jpg');">
-                <audio id="audio"  src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
-              </button><button class="slide" onclick="switchSrc(this, '02')" style="background-image: url('/assets/images/team3.jpg');">
-        
-              </button><button class="slide" onclick="switchSrc(this, 'solid_shapes_scene_2_part_1')" style="background-image: url('/assets/images/team3.jpg');">
-              
-              </button><button class="slide" onclick="switchSrc(this, 'visualising_shapes_scene_2_')" style="background-image: url('/assets/images/team3.jpg');">
-              
-              <!-- </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('assets\images\team3.jpg');">     -->
-            </button></div>
-          </div>
-          <script>
+                <button class="slide " onclick="play()" style="background-image: url('/assets/images/team3.jpg');">
+                    <audio id="audio"
+                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+                </button><button class="slide" onclick="switchSrc(this, '02')"
+                    style="background-image: url('/assets/images/team3.jpg');">
+
+                </button><button class="slide" onclick="switchSrc(this, 'solid_shapes_scene_2_part_1')"
+                    style="background-image: url('/assets/images/team3.jpg');">
+
+                </button><button class="slide" onclick="switchSrc(this, 'visualising_shapes_scene_2_')"
+                    style="background-image: url('/assets/images/team3.jpg');">
+
+                    <!-- </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('assets\images\team3.jpg');">     -->
+                </button></div>
+        </div>
+        <script>
             function play() {
-              var audio = document.getElementById("audio");
-              audio.play();
+                var audio = document.getElementById("audio");
+                audio.play();
             }
-          </script>
-        </model-viewer>
-        
-        <script type="module">
-          const modelViewer = document.querySelector("model-viewer");
+        </script>
+    </model-viewer>
+
+    <script type="module">
+        const modelViewer = document.querySelector("model-viewer");
         
           window.switchSrc = (element, name) => {
             const base = "models/final/" + name;
@@ -102,20 +111,20 @@
             ev.preventDefault();
           });
         </script>
-        
-        <style>
-          /* This keeps child nodes hidden while the element loads */
-          :not(:defined) > * {
+
+    <style>
+        /* This keeps child nodes hidden while the element loads */
+        :not(:defined)>* {
             display: none;
-          }
-        
-          model-viewer {
+        }
+
+        model-viewer {
             background-color: #eee;
             overflow-x: hidden;
             --poster-color: #eee;
-          }
-        
-          #ar-button {
+        }
+
+        #ar-button {
             background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
             background-repeat: no-repeat;
             background-size: 20px 20px;
@@ -129,80 +138,90 @@
             padding: 0px 16px 0px 40px;
             font-family: Roboto Regular, Helvetica Neue, sans-serif;
             font-size: 14px;
-            color:#4285f4;
+            color: #4285f4;
             height: 36px;
             line-height: 36px;
             border-radius: 18px;
             border: 1px solid #DADCE0;
-          }
-        
-          #ar-button:active {
+        }
+
+        #ar-button:active {
             background-color: #E8EAED;
-          }
-        
-          #ar-button:focus {
+        }
+
+        #ar-button:focus {
             outline: none;
-          }
-        
-          #ar-button:focus-visible {
+        }
+
+        #ar-button:focus-visible {
             outline: 1px solid #4285f4;
-          }
-        
-          @keyframes circle {
-            from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
-            to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
-          }
-        
-          @keyframes elongate {
-            from { transform: translateX(100px); }
-            to   { transform: translateX(-100px); }
-          }
-        
-          model-viewer > #ar-prompt {
+        }
+
+        @keyframes circle {
+            from {
+                transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+            }
+        }
+
+        @keyframes elongate {
+            from {
+                transform: translateX(100px);
+            }
+
+            to {
+                transform: translateX(-100px);
+            }
+        }
+
+        model-viewer>#ar-prompt {
             position: absolute;
             left: 50%;
             bottom: 175px;
             animation: elongate 2s infinite ease-in-out alternate;
             display: none;
-          }
-        
-          model-viewer[ar-status="session-started"] > #ar-prompt {
+        }
+
+        model-viewer[ar-status="session-started"]>#ar-prompt {
             display: block;
-          }
-        
-          model-viewer > #ar-prompt > img {
+        }
+
+        model-viewer>#ar-prompt>img {
             animation: circle 4s linear infinite;
-          }
-        
-          model-viewer > #ar-failure {
+        }
+
+        model-viewer>#ar-failure {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             bottom: 175px;
             display: none;
-          }
-        
-          model-viewer[ar-tracking="not-tracking"] > #ar-failure {
+        }
+
+        model-viewer[ar-tracking="not-tracking"]>#ar-failure {
             display: block;
-          }
-        
-          .slider {
+        }
+
+        .slider {
             width: 100%;
             text-align: center;
             overflow: hidden;
             position: absolute;
             bottom: 16px;
-          }
-        
-          .slides {
+        }
+
+        .slides {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
-          }
-        
-          .slide {
+        }
+
+        .slide {
             scroll-snap-align: start;
             flex-shrink: 0;
             width: 100px;
@@ -215,32 +234,32 @@
             border-radius: 10px;
             border: none;
             display: flex;
-          }
-        
-          .slide.selected {
-            border: 2px solid #4285f4;
-          }
-        
-          .slide:focus {
-            outline: none;
-          }
-        
-          .slide:focus-visible {
-            outline: 1px solid #4285f4;
-          }
-        
-        </style>
-        
-        <script src="" async defer></script>
+        }
 
-        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/smoothscroll/smooth-scroll.js"></script>
-        <script src="assets/ytplayer/index.js"></script>
-        <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
-        <script src="assets/theme/js/script.js"></script>
-        <script src="assets/formoid/formoid.min.js"></script>
-    
-        <!-- Import the component -->
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    </body>
+        .slide.selected {
+            border: 2px solid #4285f4;
+        }
+
+        .slide:focus {
+            outline: none;
+        }
+
+        .slide:focus-visible {
+            outline: 1px solid #4285f4;
+        }
+    </style>
+
+    <script src="" async defer></script>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/ytplayer/index.js"></script>
+    <script src="assets/mbr-testimonials-slider/mbr-testimonials-slider.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+    <script src="assets/formoid/formoid.min.js"></script>
+
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+
 </html>
