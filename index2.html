@@ -522,37 +522,6 @@
                                     sideview2.addEventListener('click', () => {
                                         modelViewerTransform2.orientation = `0deg 00deg 270deg`;
                                     });
-
-                                    modelViewerTransform.addEventListener('load', () => {
-                                        const center = modelViewerTransform.getCameraTarget();
-                                        const size = modelViewerTransform.getDimensions();
-                                        const x2 = size.x / 2;
-                                        const y2 = size.y / 2;
-                                        const z2 = size.z / 2;
-
-                                        modelViewerTransform.updateHotspot({
-                                            name: 'hotspot-dim+X-Y',
-                                            position: `${center.x + x2} ${center.y - y2} ${center.z}`
-                                        });
-                                        modelViewerTransform.querySelector('button[slot="hotspot-dim+X-Y"]')
-                                            .textContent = `Side view`;
-
-                                        modelViewerTransform.updateHotspot({
-                                            name: 'hotspot-dim+X-Z',
-                                            position: `${center.x - x2} ${center.y} ${center.z - z2}`
-                                        });
-                                        modelViewerTransform.querySelector('button[slot="hotspot-dim+X-Z"]')
-                                            .textContent = `Front view`;
-
-                                        modelViewer.updateHotspot({
-                                            name: 'hotspot-dim+Y-Z',
-                                            position: `${center.x - x2} ${center.y - y2} ${center.z}`
-                                        });
-                                        modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]')
-                                            .textContent = `Top view`;
-                                    })
-
-
                                 </script>
 
 
@@ -1235,7 +1204,54 @@
             <div class="row justify-content-center">
                 <div class="col-12 md-pb col-md-12 p-0 col-lg-12 ">
                     <div class="image-wrapper">
-                        <img class="w-100" src="assets/images/features4.jpg" alt="Mobirise">
+                        <model-viewer  timescale="0.5" id="orientation5" class="w-100" bounds="tight"
+                                    src="models\final\shapes_asses2.glb" ar
+                                    ar-modes="scene-viewer webxr quick-look" environment-image="neutral"
+                                    poster="images\poster.webp" shadow-intensity="1" interaction-prompt="auto" orientation="0deg 0deg 0deg" style="background-color: rgb(255, 166, 166); height: 450px;"
+                                    camera-orbit = "0deg 90deg 70%">
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                    <!-- <div>
+                                        <audio style="width: 150px;" id="audio-button4" controls
+                                            src="/voiceover/visual_scene_2.mp3"></audio>
+                                    </div> -->
+                                    <button id="ar-button">
+                                        <!-- View in Your Space -->
+                                    </button>
+                                    <!-- <div id="ar-prompt">
+                                        <img src="images\ar_hand_prompt.png">
+                                    </div> -->
+
+
+                                    <div style="margin-top: 5px; margin-left: 5px;">
+                                        <button id="top5" style="border-radius: 18px;">Top View</button>
+                                        <button id="front5" style="border-radius: 18px;">Front View</button>
+                                        <button id="side5" style="border-radius: 18px;">Side View</button>
+                                    </div>
+                                </model-viewer>
+
+                                <script type="text/javascript">
+                                    const modelViewerTransform5 = document.getElementById('orientation5');
+                                    // console.log(modelViewerTransform2);
+                                    const topview5 = document.getElementById('top5');
+                                    // console.log(topview2);
+                                    const sideview5 = document.getElementById('side5');
+                                    const frontview5 = document.getElementById('front5');
+
+                                    topview5.addEventListener('click', () => {
+                                        modelViewerTransform5.orientation = `0deg 90deg 0deg`;
+                                    });
+                                    frontview5.addEventListener('click', () => {
+                                        modelViewerTransform5.orientation = `0deg 0deg 0deg`;
+                                    });
+                                    sideview5.addEventListener('click', () => {
+                                        modelViewerTransform5.orientation = `0deg 00deg 270deg`;
+                                    });
+                                </script>
+
+
+
                     </div>
                 </div>
                 <!-- <div class="align-left col-lg-6">
